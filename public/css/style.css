@@ -1,0 +1,1122 @@
+/* =====================================================
+   VANESIA - MAIN STYLE
+===================================================== */
+
+:root {
+    --forest: #173b2d;
+    --forest-dark: #10291f;
+    --cream: #f7f1e3;
+    --cream-dark: #eee5d3;
+    --brown: #4a3024;
+    --gold: #c69a52;
+    --gold-light: #e2c98f;
+    --text: #263028;
+    --muted: #6d716b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Cormorant Garamond", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.vanesia-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    padding: 22px 0;
+
+    background: rgba(23, 59, 45, 0.15);
+    backdrop-filter: blur(5px);
+
+    transition:
+        background 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.vanesia-navbar.scrolled {
+    background: rgba(23, 59, 45, 0.98);
+    padding: 14px 0;
+
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.vanesia-logo {
+    color: var(--white) !important;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 31px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    line-height: 0.8;
+}
+
+.vanesia-logo span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 7px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.vanesia-navbar .nav-link {
+    color: var(--white) !important;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    margin-left: 25px;
+
+    transition: color 0.3s ease;
+}
+
+.vanesia-navbar .nav-link:hover {
+    color: var(--gold-light) !important;
+}
+
+.btn-vanesia {
+    display: inline-block;
+
+    background: var(--gold);
+    color: var(--white) !important;
+
+    padding: 13px 23px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.btn-vanesia:hover {
+    background: var(--white);
+    color: var(--forest) !important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 41, 31, 0.98) 0%,
+            rgba(23, 59, 45, 0.88) 40%,
+            rgba(23, 59, 45, 0.45) 75%,
+            rgba(23, 59, 45, 0.2) 100%
+        ),
+        url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2000&q=85")
+        center center / cover no-repeat;
+
+    color: var(--white);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    padding-top: 130px;
+    padding-bottom: 170px;
+}
+
+.hero-label {
+    display: inline-block;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.hero-section h1 {
+    max-width: 800px;
+
+    font-size: clamp(70px, 9vw, 125px);
+    font-weight: 500;
+
+    line-height: 0.82;
+
+    margin-bottom: 35px;
+}
+
+.hero-section h1 span {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-style: italic;
+}
+
+.hero-section p {
+    max-width: 570px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 28px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.btn-hero-primary {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.btn-hero-primary:hover {
+    background: var(--white);
+    color: var(--forest);
+}
+
+.btn-hero-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    color: var(--white);
+}
+
+.btn-hero-secondary:hover {
+    background: var(--white);
+    color: var(--forest);
+}
+
+
+/* =====================================================
+   HERO FEATURES
+===================================================== */
+
+.hero-bottom {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 5;
+
+    padding: 25px 0;
+
+    background: rgba(16, 41, 31, 0.5);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(10px);
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.hero-feature span {
+    color: var(--gold-light);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+}
+
+.hero-feature strong {
+    display: block;
+
+    color: var(--white);
+
+    font-size: 12px;
+}
+
+.hero-feature small {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.intro-section {
+    padding: 130px 0;
+
+    background: var(--cream);
+}
+
+.section-label {
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.intro-section h2,
+.quality-section h2 {
+    max-width: 650px;
+
+    color: var(--forest);
+
+    font-size: clamp(48px, 5vw, 72px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+.intro-text {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: var(--forest);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+}
+
+.text-link i {
+    margin-left: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--gold);
+}
+
+.text-link:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.products-section {
+    padding: 120px 0;
+
+    background: var(--cream-dark);
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    color: var(--forest);
+
+    font-size: clamp(48px, 5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    margin: 0;
+}
+
+.product-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+    border: none;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(23, 59, 45, 0.12);
+}
+
+.product-image {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    background: #ddd4c1;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.product-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ddd4c1;
+
+    color: var(--forest);
+
+    font-size: 45px;
+}
+
+.product-content {
+    padding: 30px;
+}
+
+.product-origin {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.product-content h3 {
+    color: var(--forest);
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.product-link {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--forest);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.product-link:hover {
+    color: var(--gold);
+}
+
+.empty-products {
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: var(--cream);
+}
+
+.empty-products i {
+    color: var(--gold);
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.empty-products h3 {
+    color: var(--forest);
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.empty-products p {
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   ORIGIN
+===================================================== */
+
+.origin-section {
+    min-height: 650px;
+
+    display: flex;
+
+    background: var(--forest);
+
+    color: var(--white);
+}
+
+.origin-image {
+    width: 50%;
+
+    background:
+        linear-gradient(
+            rgba(23, 59, 45, 0.1),
+            rgba(23, 59, 45, 0.1)
+        ),
+        url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1400&q=85")
+        center center / cover no-repeat;
+}
+
+.origin-content {
+    width: 50%;
+
+    padding: 100px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.origin-content .section-label {
+    color: var(--gold-light);
+}
+
+.origin-content h2 {
+    color: var(--white);
+
+    font-size: clamp(65px, 7vw, 100px);
+
+    font-weight: 500;
+
+    line-height: 0.85;
+
+    margin-bottom: 30px;
+}
+
+.origin-content p {
+    max-width: 500px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+.btn-light-vanesia {
+    align-self: flex-start;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 2px;
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-light-vanesia:hover {
+    background: var(--white);
+
+    color: var(--forest);
+}
+
+
+/* =====================================================
+   QUALITY
+===================================================== */
+
+.quality-section {
+    padding: 130px 0;
+
+    background: var(--cream);
+}
+
+.quality-intro {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    padding-top: 20px;
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 60px;
+
+    border-top: 1px solid #cfc5b2;
+    border-bottom: 1px solid #cfc5b2;
+}
+
+.process-item {
+    padding: 40px 25px;
+
+    border-right: 1px solid #cfc5b2;
+}
+
+.process-item:last-child {
+    border-right: none;
+}
+
+.process-item span {
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.process-item h3 {
+    color: var(--forest);
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    margin: 20px 0 12px;
+}
+
+.process-item p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-section {
+    position: relative;
+
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(23, 59, 45, 0.8),
+            rgba(23, 59, 45, 0.8)
+        ),
+        url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2000&q=85")
+        center center / cover no-repeat;
+
+    color: var(--white);
+}
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+}
+
+.cta-content .section-label {
+    color: var(--gold-light);
+}
+
+.cta-content h2 {
+    max-width: 800px;
+
+    margin: 0 auto 25px;
+
+    color: var(--white);
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    display: inline-block;
+
+    background: var(--gold);
+
+    color: var(--white);
+
+    padding: 15px 30px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-cta:hover {
+    background: var(--white);
+
+    color: var(--forest);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.vanesia-footer {
+    padding: 80px 0 25px;
+
+    background: var(--forest-dark);
+
+    color: var(--white);
+}
+
+.footer-logo {
+    color: var(--white);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 43px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+.footer-tagline {
+    color: var(--gold-light) !important;
+
+    margin-top: 8px;
+}
+
+.footer-description {
+    max-width: 400px;
+
+    color: rgba(255, 255, 255, 0.6) !important;
+
+    line-height: 1.8;
+}
+
+.vanesia-footer h5 {
+    color: var(--white);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.vanesia-footer a {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 13px;
+
+    margin-bottom: 11px;
+
+    transition: color 0.3s ease;
+}
+
+.vanesia-footer a:hover {
+    color: var(--gold-light);
+}
+
+.vanesia-footer p {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 60px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .vanesia-navbar {
+        background: rgba(23, 59, 45, 0.98);
+
+        padding: 14px 0;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+
+        padding-top: 15px;
+    }
+
+    .vanesia-navbar .nav-link {
+        margin-left: 0;
+
+        margin-top: 8px;
+    }
+
+    .btn-vanesia {
+        margin-top: 12px;
+    }
+
+    .hero-section {
+        min-height: 850px;
+    }
+
+    .hero-content {
+        padding-top: 140px;
+    }
+
+    .hero-section h1 {
+        font-size: 85px;
+    }
+
+    .hero-bottom {
+        padding: 18px 0;
+    }
+
+    .hero-feature {
+        margin: 8px 0;
+    }
+
+    .origin-section {
+        flex-direction: column;
+    }
+
+    .origin-image {
+        width: 100%;
+
+        min-height: 400px;
+    }
+
+    .origin-content {
+        width: 100%;
+
+        padding: 80px 10%;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .process-item:nth-child(-n + 2) {
+        border-bottom: 1px solid #cfc5b2;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .vanesia-logo {
+        font-size: 25px;
+    }
+
+    .hero-section {
+        min-height: 850px;
+    }
+
+    .hero-content {
+        padding-top: 120px;
+        padding-bottom: 220px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-section h1 {
+        font-size: 65px;
+
+        line-height: 0.85;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-bottom {
+        padding: 12px 0;
+    }
+
+    .hero-feature span {
+        font-size: 20px;
+    }
+
+    .hero-feature strong {
+        font-size: 10px;
+    }
+
+    .hero-feature small {
+        font-size: 8px;
+    }
+
+    .intro-section,
+    .products-section,
+    .quality-section {
+        padding: 85px 0;
+    }
+
+    .intro-section h2,
+    .quality-section h2 {
+        font-size: 48px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading .text-link {
+        display: inline-block;
+
+        margin-top: 20px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-item {
+        border-right: none !important;
+
+        border-bottom: 1px solid #cfc5b2;
+    }
+
+    .process-item:last-child {
+        border-bottom: none;
+    }
+
+    .origin-image {
+        min-height: 300px;
+    }
+
+    .origin-content {
+        padding: 70px 30px;
+    }
+
+    .origin-content h2 {
+        font-size: 70px;
+    }
+
+    .cta-section {
+        min-height: 500px;
+    }
+
+    .cta-content h2 {
+        font-size: 60px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+    /* =====================================================
+   LANGUAGE SWITCHER
+===================================================== */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-left: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.language-switcher a {
+    color: rgba(255, 255, 255, 0.55);
+
+    transition: all 0.3s ease;
+}
+
+.language-switcher a:hover {
+    color: var(--gold-light);
+}
+
+.language-switcher a.active {
+    color: var(--white);
+}
+
+.language-switcher span {
+    color: rgba(255, 255, 255, 0.35);
+}
+}
