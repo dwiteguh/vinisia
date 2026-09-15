@@ -145,183 +145,375 @@ img {
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* =========================================================
+   VANESIA HERO
+========================================================= */
 
-.hero-section {
+.vanesia-hero {
     position: relative;
-
-    min-height: 100vh;
-
+    min-height: 92vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    background: #1f1b16;
+    color: #ffffff;
+}
+
+
+/* HERO IMAGE */
+
+.vanesia-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.vanesia-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* DARK OVERLAY */
+
+.vanesia-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 
     background:
         linear-gradient(
             90deg,
-            rgba(16, 41, 31, 0.98) 0%,
-            rgba(23, 59, 45, 0.88) 40%,
-            rgba(23, 59, 45, 0.45) 75%,
-            rgba(23, 59, 45, 0.2) 100%
-        ),
-        url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2000&q=85")
-        center center / cover no-repeat;
-
-    color: var(--white);
+            rgba(22, 18, 14, 0.92) 0%,
+            rgba(22, 18, 14, 0.78) 38%,
+            rgba(22, 18, 14, 0.35) 70%,
+            rgba(22, 18, 14, 0.15) 100%
+        );
 }
 
-.hero-content {
+
+/* CONTENT */
+
+.vanesia-hero-container {
     position: relative;
     z-index: 2;
-
-    width: 100%;
-
     padding-top: 130px;
     padding-bottom: 170px;
 }
 
-.hero-label {
+
+/* LABEL */
+
+.vanesia-hero-label {
     display: inline-block;
 
-    color: var(--gold-light);
+    margin-bottom: 22px;
 
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 25px;
-}
-
-.hero-section h1 {
-    max-width: 800px;
-
-    font-size: clamp(70px, 9vw, 125px);
-    font-weight: 500;
-
-    line-height: 0.82;
-
-    margin-bottom: 35px;
-}
-
-.hero-section h1 span {
-    display: block;
-
-    color: var(--gold-light);
-
-    font-style: italic;
-}
-
-.hero-section p {
-    max-width: 570px;
-
-    color: rgba(255, 255, 255, 0.82);
-
-    font-size: 16px;
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-}
-
-.hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.btn-hero-primary,
-.btn-hero-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 15px 28px;
-
-    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
 
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #d2aa62;
+}
+
+
+/* HEADLINE */
+
+.vanesia-hero-title {
+    margin: 0;
+
+    max-width: 780px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(52px, 6vw, 88px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+}
+
+.vanesia-hero-title span {
+    color: #e5c98c;
+}
+
+
+/* TAGLINE */
+
+.vanesia-hero-tagline {
+    margin-top: 30px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    color: #f1e6d0;
+}
+
+
+/* DESCRIPTION */
+
+.vanesia-hero-description {
+    max-width: 620px;
+
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* BUTTON AREA */
+
+.vanesia-hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+/* BUTTON */
+
+.vanesia-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 52px;
+
+    padding: 0 26px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
 
     transition: all 0.3s ease;
 }
 
-.btn-hero-primary {
-    background: var(--gold);
-    color: var(--white);
+
+/* PRIMARY */
+
+.vanesia-btn-primary {
+    background: #c69a50;
+
+    color: #ffffff;
 }
 
-.btn-hero-primary:hover {
-    background: var(--white);
-    color: var(--forest);
-}
+.vanesia-btn-primary:hover {
+    background: #d5ad68;
 
-.btn-hero-secondary {
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
 
-    color: var(--white);
-}
-
-.btn-hero-secondary:hover {
-    background: var(--white);
-    color: var(--forest);
+    transform: translateY(-2px);
 }
 
 
-/* =====================================================
-   HERO FEATURES
-===================================================== */
+/* SECONDARY */
 
-.hero-bottom {
+.vanesia-btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.vanesia-btn-secondary:hover {
+    background: #ffffff;
+
+    color: #252019;
+
+    border-color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO BOTTOM INFO
+========================================================= */
+
+.vanesia-hero-bottom {
     position: absolute;
 
-    bottom: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
 
-    width: 100%;
+    z-index: 3;
 
-    z-index: 5;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
 
-    padding: 25px 0;
+    background: rgba(20, 17, 13, 0.35);
 
-    background: rgba(16, 41, 31, 0.5);
-
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
-.hero-feature {
+
+.vanesia-hero-bottom .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.vanesia-hero-info {
     display: flex;
+
     align-items: center;
 
-    gap: 15px;
+    gap: 18px;
+
+    min-height: 55px;
 }
 
-.hero-feature span {
-    color: var(--gold-light);
 
-    font-family: "Cormorant Garamond", serif;
+.vanesia-hero-info > span {
+    font-family: 'DM Sans', sans-serif;
 
-    font-size: 28px;
+    font-size: 11px;
+
+    color: #d2aa62;
+
+    letter-spacing: 1px;
 }
 
-.hero-feature strong {
+
+.vanesia-hero-info strong {
     display: block;
 
-    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
 
-    font-size: 12px;
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #ffffff;
 }
 
-.hero-feature small {
+
+.vanesia-hero-info small {
     display: block;
-
-    color: rgba(255, 255, 255, 0.6);
-
-    font-size: 10px;
 
     margin-top: 3px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .vanesia-hero {
+        min-height: 850px;
+    }
+
+    .vanesia-hero-container {
+        padding-top: 150px;
+        padding-bottom: 190px;
+    }
+
+    .vanesia-hero-title {
+        font-size: 62px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .vanesia-hero {
+        min-height: 900px;
+    }
+
+    .vanesia-hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(22, 18, 14, 0.78),
+                rgba(22, 18, 14, 0.90)
+            );
+    }
+
+
+    .vanesia-hero-container {
+        padding-top: 140px;
+        padding-bottom: 280px;
+    }
+
+
+    .vanesia-hero-title {
+        font-size: 52px;
+
+        line-height: 0.98;
+
+        letter-spacing: -1px;
+    }
+
+
+    .vanesia-hero-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .vanesia-hero-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .vanesia-btn {
+        width: 100%;
+    }
+
+
+    .vanesia-hero-bottom {
+        padding: 5px 0;
+    }
+
+
+    .vanesia-hero-info {
+        padding: 8px 0;
+    }
+
 }
 
 
@@ -392,407 +584,1949 @@ img {
     transform: translateX(5px);
 }
 
-
-/* =====================================================
-   PRODUCTS
-===================================================== */
-
-.products-section {
-    padding: 120px 0;
-
-    background: var(--cream-dark);
+html {
+    scroll-behavior: smooth;
 }
 
-.section-heading {
-    display: flex;
+section {
+    scroll-margin-top: 90px;
+}
 
+/* =========================================
+   VANESIA ABOUT
+========================================= */
+
+.vanesia-about-section {
+    padding: 120px 0;
+    background: #f5f0e8;
+}
+
+.vanesia-about-visual {
+    height: 560px;
+    overflow: hidden;
+}
+
+.vanesia-about-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vanesia-about-content {
+    padding-left: 45px;
+}
+
+.vanesia-about-content h2 {
+    max-width: 600px;
+    margin: 15px 0 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 70px);
+    line-height: .95;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.about-subtitle {
+    margin: 0 0 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #9b7336;
+}
+
+.vanesia-about-content > p {
+    max-width: 530px;
+    margin: 0 0 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #70685f;
+}
+
+
+/* =========================================
+   POSITIONING
+========================================= */
+
+.vanesia-about-positioning {
+    margin: 35px 0;
+    padding: 25px 0;
+    border-top: 1px solid rgba(40, 35, 29, .15);
+    border-bottom: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-about-positioning > span {
+    display: block;
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.positioning-words {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.positioning-words strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #28231d;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.vanesia-about-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-about-bottom span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.vanesia-about-bottom p {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #28231d;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vanesia-about-content {
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .vanesia-about-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-about-visual {
+        height: 400px;
+    }
+
+    .vanesia-about-content h2 {
+        font-size: 50px;
+    }
+
+    .positioning-words {
+        gap: 18px;
+    }
+
+    .positioning-words strong {
+        font-size: 25px;
+    }
+
+    .vanesia-about-bottom {
+        display: block;
+    }
+
+    .vanesia-about-bottom p {
+        margin-top: 8px;
+    }
+
+}
+
+
+/* =========================================
+   VANESIA OUR VANILLA
+========================================= */
+
+.vanesia-products-section {
+    padding: 120px 0;
+    background: #fffdf9;
+}
+
+.vanesia-products-title {
+    margin: 15px 0 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(50px, 5vw, 76px);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.vanesia-products-subtitle {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    color: #8d6935;
+}
+
+
+/* IMAGE */
+
+.vanesia-product-feature-image {
+    height: 570px;
+    overflow: hidden;
+}
+
+.vanesia-product-feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* SPECIFICATION */
+
+.vanesia-product-spec {
+    border-top: 1px solid rgba(40, 35, 29, .2);
+}
+
+.spec-header,
+.spec-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: center;
+}
+
+.spec-header {
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(40, 35, 29, .15);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8a8177;
+}
+
+.spec-row {
+    min-height: 72px;
+    border-bottom: 1px solid rgba(40, 35, 29, .12);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #5e574f;
+}
+
+.spec-row strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: #28231d;
+}
+
+
+/* NOTE */
+
+.vanesia-product-note {
+    display: flex;
+    gap: 18px;
+    margin: 35px 0;
+    padding: 24px;
+    background: #f5f0e8;
+}
+
+.note-icon {
+    flex-shrink: 0;
+    color: #9b7336;
+    font-size: 16px;
+}
+
+.vanesia-product-note h4 {
+    margin: 0 0 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #28231d;
+}
+
+.vanesia-product-note p {
+    max-width: 570px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #70685f;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .vanesia-products-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-products-title {
+        font-size: 50px;
+    }
+
+    .vanesia-product-feature-image {
+        height: 420px;
+    }
+
+    .spec-header,
+    .spec-row {
+        grid-template-columns: 1.3fr 1fr 1fr;
+    }
+
+    .spec-header {
+        font-size: 9px;
+    }
+
+    .spec-row {
+        font-size: 12px;
+    }
+
+    .spec-row strong {
+        font-size: 14px;
+    }
+
+    .vanesia-product-note {
+        padding: 20px;
+    }
+
+}
+
+/* =========================================
+   VANESIA ORIGIN
+========================================= */
+
+.vanesia-origin-section {
+    position: relative;
+    padding: 120px 0;
+    background: #f7f3ec;
+    overflow: hidden;
+}
+
+.vanesia-origin-image {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+}
+
+.vanesia-origin-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.vanesia-origin-title {
+    margin: 18px 0 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: .98;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.vanesia-origin-title span {
+    color: #9b7336;
+}
+
+.vanesia-origin-text {
+    max-width: 570px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #625b52;
+}
+
+
+/* INFORMATION */
+
+.vanesia-origin-info {
+    margin-top: 42px;
+    border-top: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-origin-info-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 19px 0;
+    border-bottom: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-origin-info-item > span {
+    min-width: 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #9b7336;
+}
+
+.vanesia-origin-info-item strong {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #28231d;
+}
+
+.vanesia-origin-info-item small {
+    display: block;
+    margin-top: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #81796f;
+}
+
+
+/* TRANSITION */
+
+.vanesia-origin-transition {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 85px;
+}
+
+.vanesia-origin-transition span {
+    flex: 1;
+    height: 1px;
+    background: rgba(40, 35, 29, .15);
+}
+
+.vanesia-origin-transition p {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-style: italic;
+    color: #8d6935;
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+
+    .vanesia-origin-section {
+        padding: 90px 0;
+    }
+
+    .vanesia-origin-image {
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .vanesia-origin-section {
+        padding: 70px 0;
+    }
+
+    .vanesia-origin-image {
+        height: 420px;
+    }
+
+    .vanesia-origin-title {
+        font-size: 50px;
+    }
+
+    .vanesia-origin-text {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .vanesia-origin-transition {
+        gap: 15px;
+        margin-top: 60px;
+    }
+
+    .vanesia-origin-transition p {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================
+   VANESIA QUALITY & SPECIFICATIONS
+========================================= */
+
+.vanesia-quality-section {
+    padding: 120px 0;
+    background: #f5f0e8;
+}
+
+.vanesia-quality-title {
+    margin: 15px 0 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 5vw, 76px);
+    line-height: .95;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.vanesia-quality-subtitle {
+    margin: 0 0 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #8d6935;
+}
+
+.vanesia-quality-description {
+    max-width: 470px;
+    margin: 0 0 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #665e55;
+}
+
+.vanesia-quality-description.id-copy {
+    color: #8a8177;
+}
+
+.vanesia-specification-list {
+    border-top: 1px solid rgba(40, 35, 29, .2);
+}
+
+.vanesia-specification-item {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: center;
+    min-height: 82px;
+    border-bottom: 1px solid rgba(40, 35, 29, .15);
+}
+
+.spec-number {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #9b7336;
+}
+
+.spec-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.spec-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #8a8177;
+}
+
+.spec-content strong {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+    color: #28231d;
+}
+
+.vanesia-quality-principle {
+    display: flex;
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.principle-line {
+    width: 2px;
+    min-height: 75px;
+    background: #b18a4a;
+}
+
+.principle-label {
+    display: block;
+    margin-bottom: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: #9b7336;
+}
+
+.vanesia-quality-principle h3 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #28231d;
+}
+
+.vanesia-quality-principle p {
+    margin: 4px 0 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #8a8177;
+}
+
+.vanesia-quality-note {
+    display: flex;
+    gap: 16px;
+    margin-top: 35px;
+    padding: 22px;
+    border: 1px solid rgba(40, 35, 29, .12);
+    background: rgba(255, 253, 249, .55);
+}
+
+.vanesia-quality-note .note-icon {
+    flex-shrink: 0;
+    color: #9b7336;
+    font-size: 15px;
+}
+
+.vanesia-quality-note h4 {
+    margin: 0 0 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #28231d;
+}
+
+.vanesia-quality-note p {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #746c63;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .vanesia-quality-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-quality-title {
+        font-size: 52px;
+    }
+
+    .vanesia-specification-item {
+        grid-template-columns: 40px 1fr;
+        min-height: 75px;
+    }
+
+    .spec-content {
+        display: block;
+    }
+
+    .spec-content strong {
+        display: block;
+        margin-top: 5px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .vanesia-quality-principle {
+        margin-top: 35px;
+    }
+
+    .vanesia-quality-note {
+        padding: 18px;
+    }
+
+}
+
+/* =========================================
+   VANESIA WHY VANESIA
+========================================= */
+
+.vanesia-why-section {
+    padding: 120px 0;
+    background: #fffdf9;
+}
+
+.vanesia-why-title {
+    margin: 15px auto 8px;
+    max-width: 780px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: .98;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.vanesia-why-subtitle {
+    margin: 0 auto 25px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #9b7336;
+}
+
+.vanesia-why-description {
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #70685f;
+}
+
+
+/* =========================================
+   WHY CARDS
+========================================= */
+
+.vanesia-why-card {
+    height: 100%;
+    padding: 35px 28px;
+    border-top: 1px solid rgba(40, 35, 29, .2);
+    border-bottom: 1px solid rgba(40, 35, 29, .12);
+    transition: transform .3s ease;
+}
+
+.vanesia-why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-icon {
+    margin-bottom: 28px;
+    font-size: 18px;
+    color: #9b7336;
+}
+
+.why-number {
+    display: block;
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.vanesia-why-card h3 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    color: #28231d;
+}
+
+.why-indonesian {
+    margin: 8px 0 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #9b7336;
+}
+
+.why-divider {
+    width: 35px;
+    height: 1px;
+    margin: 25px 0 20px;
+    background: rgba(155, 115, 54, .5);
+}
+
+.vanesia-why-card > p:last-child {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.75;
+    color: #746c63;
+}
+
+
+/* =========================================
+   PROCESS VISUAL
+========================================= */
+
+.vanesia-why-visual {
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+}
+
+.vanesia-why-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.visual-caption {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    padding: 14px 18px;
+    background: rgba(40, 35, 29, .82);
+    backdrop-filter: blur(5px);
+}
+
+.visual-caption span {
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #d2aa62;
+}
+
+.visual-caption strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* =========================================
+   APPROACH STATEMENT
+========================================= */
+
+.vanesia-why-statement {
+    padding-left: 60px;
+}
+
+.vanesia-why-statement > span {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.vanesia-why-statement h3 {
+    max-width: 500px;
+    margin: 0 0 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 55px);
+    line-height: 1;
+    font-weight: 500;
+    color: #28231d;
+}
+
+.vanesia-why-statement p {
+    max-width: 470px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #70685f;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vanesia-why-statement {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .vanesia-why-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-why-title {
+        font-size: 50px;
+    }
+
+    .vanesia-why-card {
+        padding: 28px 24px;
+    }
+
+    .vanesia-why-visual {
+        height: 350px;
+    }
+
+    .vanesia-why-statement h3 {
+        font-size: 40px;
+    }
+
+}
+
+/* =========================================
+   VANESIA OUR PROCESS
+========================================= */
+
+.vanesia-process-section {
+    padding: 120px 0;
+    background: #28231d;
+    color: #fff;
+}
+
+.vanesia-process-section .section-label {
+    color: #d2aa62;
+}
+
+.vanesia-process-title {
+    margin: 15px auto 8px;
+    max-width: 800px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 74px);
+    line-height: .95;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #fff;
+}
+
+.vanesia-process-subtitle {
+    margin: 0 0 25px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #d2aa62;
+}
+
+.vanesia-process-description {
+    margin: 0 auto;
+    max-width: 600px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.65);
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.vanesia-process-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 80px;
+}
+
+.vanesia-process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 31px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: rgba(255,255,255,.18);
+}
+
+.vanesia-process-item {
+    position: relative;
+    padding: 0 22px;
+}
+
+.process-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-number {
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #d2aa62;
+}
+
+.process-icon {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(210,170,98,.55);
+    border-radius: 50%;
+    background: #28231d;
+    font-size: 17px;
+    color: #d2aa62;
+}
+
+.process-content {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.process-action {
+    display: block;
+    margin-bottom: 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #d2aa62;
+}
+
+.process-content h3 {
+    margin: 0;
+    min-height: 58px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 500;
+    color: #fff;
+}
+
+.process-indonesian {
+    margin: 9px 0 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    color: rgba(255,255,255,.48);
+}
+
+.process-content > p:last-child {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.62);
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.vanesia-process-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.vanesia-process-bottom span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #d2aa62;
+}
+
+.vanesia-process-bottom strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vanesia-process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 20px;
+    }
+
+    .vanesia-process-timeline::before {
+        display: none;
+    }
+
+    .vanesia-process-item {
+        padding: 0 15px;
+    }
+
+    .process-content h3 {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .vanesia-process-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-process-title {
+        font-size: 50px;
+    }
+
+    .vanesia-process-timeline {
+        display: block;
+        margin-top: 60px;
+    }
+
+    .vanesia-process-item {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        gap: 20px;
+        padding: 0 0 45px;
+    }
+
+    .process-top {
+        align-items: center;
+    }
+
+    .process-number {
+        margin-bottom: 10px;
+    }
+
+    .process-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .process-content {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .process-content h3 {
+        font-size: 29px;
+    }
+
+    .process-indonesian {
+        margin-bottom: 15px;
+    }
+
+    .vanesia-process-bottom {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .vanesia-process-bottom strong {
+        display: block;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+}
+
+/* =========================================
+   VANESIA EXPORT & PACKAGING
+========================================= */
+
+.vanesia-export-section {
+    padding: 120px 0;
+    background: #f5f0e8;
+}
+
+.vanesia-export-title {
+    margin: 15px auto 8px;
+    max-width: 800px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 74px);
+    line-height: .95;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.vanesia-export-subtitle {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #9b7336;
+}
+
+
+/* =========================================
+   PACKAGING VISUAL
+========================================= */
+
+.vanesia-packaging-visual {
+    position: relative;
+    height: 580px;
+    overflow: hidden;
+    background: #e8e0d4;
+}
+
+.vanesia-packaging-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.packaging-caption {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    padding: 18px 20px;
+    background: rgba(40, 35, 29, .84);
+    backdrop-filter: blur(5px);
+}
+
+.packaging-caption span {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #d2aa62;
+}
+
+.packaging-caption strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* =========================================
+   SAMPLE OPTIONS
+========================================= */
+
+.vanesia-sample-content {
+    padding-left: 35px;
+}
+
+.sample-intro {
+    margin-bottom: 25px;
+}
+
+.sample-intro > span {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.sample-intro p {
+    max-width: 470px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #746c63;
+}
+
+.vanesia-sample-option {
+    position: relative;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 25px;
+    padding: 27px 0;
+    border-top: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-sample-option:last-of-type {
+    border-bottom: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-sample-option.recommended {
+    padding: 32px 20px;
+    border: 1px solid rgba(155, 115, 54, .35);
+    background: rgba(255, 253, 249, .65);
+}
+
+.recommended-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 12px;
+    background: #9b7336;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.sample-weight {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #28231d;
+}
+
+.sample-details h3 {
+    margin: 0 0 7px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 500;
+    color: #28231d;
+}
+
+.sample-details p {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+    color: #746c63;
+}
+
+
+/* =========================================
+   SHIPPING NOTE
+========================================= */
+
+.vanesia-shipping-note {
+    display: flex;
+    gap: 15px;
+    margin-top: 28px;
+    padding: 20px;
+    background: #e9e1d5;
+}
+
+.shipping-icon {
+    flex-shrink: 0;
+    color: #9b7336;
+    font-size: 15px;
+}
+
+.vanesia-shipping-note p {
+    margin: 0 0 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #746c63;
+}
+
+.vanesia-shipping-note strong {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #28231d;
+}
+
+
+/* =========================================
+   EVALUATION NOTE
+========================================= */
+
+.vanesia-evaluation-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #8a8177;
+}
+
+.vanesia-evaluation-note i {
+    color: #9b7336;
+}
+
+
+/* =========================================
+   COMMERCIAL TERMS
+========================================= */
+
+.vanesia-commercial-section {
+    margin-top: 110px;
+    padding-top: 55px;
+    border-top: 1px solid rgba(40, 35, 29, .15);
+}
+
+.commercial-heading {
+    display: flex;
     align-items: end;
     justify-content: space-between;
-
-    margin-bottom: 50px;
+    gap: 30px;
 }
 
-.section-heading h2 {
-    color: var(--forest);
-
-    font-size: clamp(48px, 5vw, 68px);
-
-    font-weight: 500;
-
-    line-height: 0.9;
-
+.commercial-heading .section-label {
     margin: 0;
 }
 
-.product-card {
+.commercial-heading p {
+    max-width: 450px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #8a8177;
+}
+
+.commercial-item {
     height: 100%;
-
-    overflow: hidden;
-
-    background: var(--cream);
-
-    border: none;
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+    padding: 25px;
+    border: 1px solid rgba(40, 35, 29, .12);
+    background: rgba(255, 253, 249, .45);
 }
 
-.product-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 20px 45px rgba(23, 59, 45, 0.12);
+.commercial-number {
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
 }
 
-.product-image {
-    position: relative;
-
-    height: 350px;
-
-    overflow: hidden;
-
-    background: #ddd4c1;
+.commercial-item h3 {
+    margin: 0 0 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #28231d;
 }
 
-.product-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.6s ease;
+.commercial-item p {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+    color: #746c63;
 }
 
-.product-card:hover .product-image img {
-    transform: scale(1.06);
-}
 
-.product-placeholder {
-    width: 100%;
-    height: 100%;
+/* =========================================
+   EXPORT CTA
+========================================= */
 
+.vanesia-export-cta {
     display: flex;
-
     align-items: center;
-    justify-content: center;
-
-    background: #ddd4c1;
-
-    color: var(--forest);
-
-    font-size: 45px;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px;
+    padding: 35px 0 0;
+    border-top: 1px solid rgba(40, 35, 29, .15);
 }
 
-.product-content {
-    padding: 30px;
-}
-
-.product-origin {
-    color: var(--gold);
-
+.vanesia-export-cta > div > span {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'DM Sans', sans-serif;
     font-size: 9px;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
 
+.vanesia-export-cta h3 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: #28231d;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vanesia-packaging-visual {
+        height: 500px;
+    }
+
+    .vanesia-sample-content {
+        padding-left: 0;
+    }
+
+    .commercial-heading {
+        display: block;
+    }
+
+    .commercial-heading p {
+        margin-top: 15px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .vanesia-export-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-export-title {
+        font-size: 50px;
+    }
+
+    .vanesia-packaging-visual {
+        height: 400px;
+    }
+
+    .vanesia-sample-option {
+        grid-template-columns: 70px 1fr;
+        gap: 15px;
+    }
+
+    .sample-weight {
+        font-size: 29px;
+    }
+
+    .sample-details h3 {
+        font-size: 24px;
+    }
+
+    .vanesia-commercial-section {
+        margin-top: 75px;
+    }
+
+    .vanesia-export-cta {
+        display: block;
+        margin-top: 60px;
+    }
+
+    .vanesia-export-cta .vanesia-btn {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   VANESIA WHO WE SERVE
+========================================= */
+
+.vanesia-who-section {
+    padding: 120px 0;
+    background: #fffdf9;
+}
+
+.vanesia-who-title {
+    max-width: 720px;
+    margin: 15px 0 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: .97;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #28231d;
+}
+
+.vanesia-who-subtitle {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #9b7336;
+}
+
+.vanesia-who-intro {
+    max-width: 470px;
+    margin: 0 0 5px auto;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #70685f;
+}
+
+
+/* =========================================
+   BUYER GRID
+========================================= */
+
+.vanesia-buyer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 75px;
+    border-top: 1px solid rgba(40, 35, 29, .15);
+    border-left: 1px solid rgba(40, 35, 29, .15);
+}
+
+.vanesia-buyer-item {
+    position: relative;
+    min-height: 220px;
+    padding: 30px;
+    border-right: 1px solid rgba(40, 35, 29, .15);
+    border-bottom: 1px solid rgba(40, 35, 29, .15);
+    transition: background .3s ease;
+}
+
+.vanesia-buyer-item:hover {
+    background: #f5f0e8;
+}
+
+.buyer-number {
+    display: block;
+    margin-bottom: 25px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.buyer-icon {
+    margin-bottom: 22px;
+    font-size: 18px;
+    color: #9b7336;
+}
+
+.vanesia-buyer-item h3 {
+    max-width: 280px;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 500;
+    color: #28231d;
+}
+
+.vanesia-buyer-item p {
+    margin: 8px 0 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #8a8177;
+}
+
+
+/* =========================================
+   B2B STATEMENT
+========================================= */
+
+.vanesia-b2b-statement {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 65px;
+}
+
+.b2b-line {
+    width: 2px;
+    height: 60px;
+    background: #b18a4a;
+}
+
+.vanesia-b2b-statement span {
+    display: block;
+    margin-bottom: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9b7336;
+}
+
+.vanesia-b2b-statement strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #28231d;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vanesia-who-intro {
+        margin: 20px 0 0;
+    }
+
+    .vanesia-buyer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .vanesia-who-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-who-title {
+        font-size: 50px;
+    }
+
+    .vanesia-buyer-grid {
+        grid-template-columns: 1fr;
+        margin-top: 55px;
+    }
+
+    .vanesia-buyer-item {
+        min-height: 190px;
+        padding: 25px;
+    }
+
+    .vanesia-b2b-statement {
+        margin-top: 50px;
+    }
+
+    .vanesia-b2b-statement strong {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =========================================================
+   REQUEST A QUOTE
+========================================================= */
+
+.vanesia-quote-section {
+    padding: 130px 0;
+    background: #28231d;
+    color: #fff;
+}
+
+.vanesia-quote-title {
+    max-width: 620px;
+    margin: 15px 0 8px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: .95;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+
+    color: #fff;
+}
+
+.vanesia-quote-subtitle {
+    margin: 0 0 30px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+
+    color: #d2aa62;
+}
+
+.vanesia-quote-description {
+    max-width: 500px;
+    margin: 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.68);
+}
+
+
+/* B2B NOTE */
+
+.vanesia-quote-note {
+    margin-top: 50px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.vanesia-quote-note span {
+    display: block;
+    margin-bottom: 10px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
     letter-spacing: 2px;
 
-    text-transform: uppercase;
-
-    margin-bottom: 10px;
+    color: #d2aa62;
 }
 
-.product-content h3 {
-    color: var(--forest);
+.vanesia-quote-note strong {
+    display: block;
+    max-width: 420px;
 
-    font-size: 32px;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    line-height: 1.15;
     font-weight: 500;
 
-    margin-bottom: 10px;
+    color: #fff;
 }
 
-.product-content p {
-    color: var(--muted);
 
+/* FORM */
+
+.vanesia-quote-form {
+    padding: 40px;
+
+    background: #f5f0e8;
+}
+
+.vanesia-quote-form label {
+    display: block;
+    margin-bottom: 9px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .5px;
+
+    color: #4b443b;
+}
+
+.vanesia-quote-form input,
+.vanesia-quote-form select,
+.vanesia-quote-form textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid rgba(40,35,29,.16);
+    border-radius: 0;
+
+    background: #fffdf9;
+
+    font-family: 'DM Sans', sans-serif;
     font-size: 13px;
 
-    line-height: 1.7;
+    color: #28231d;
+
+    outline: none;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
 }
 
-.product-link {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    color: var(--forest);
-
-    font-size: 11px;
-    font-weight: 700;
+.vanesia-quote-form input,
+.vanesia-quote-form select {
+    height: 50px;
 }
 
-.product-link:hover {
-    color: var(--gold);
+.vanesia-quote-form textarea {
+    min-height: 130px;
+    resize: vertical;
 }
 
-.empty-products {
-    padding: 80px 20px;
+.vanesia-quote-form input:focus,
+.vanesia-quote-form select:focus,
+.vanesia-quote-form textarea:focus {
+    border-color: #b18a4a;
 
-    text-align: center;
-
-    background: var(--cream);
+    box-shadow:
+        0 0 0 3px rgba(177,138,74,.08);
 }
 
-.empty-products i {
-    color: var(--gold);
-
-    font-size: 45px;
-
-    margin-bottom: 20px;
+.vanesia-quote-form input::placeholder,
+.vanesia-quote-form textarea::placeholder {
+    color: #aaa096;
 }
 
-.empty-products h3 {
-    color: var(--forest);
-
-    font-size: 32px;
-
-    margin-bottom: 10px;
-}
-
-.empty-products p {
-    color: var(--muted);
+.vanesia-quote-submit {
+    border: 0;
+    cursor: pointer;
 }
 
 
-/* =====================================================
-   ORIGIN
-===================================================== */
+/* SUCCESS */
 
-.origin-section {
-    min-height: 650px;
-
-    display: flex;
-
-    background: var(--forest);
-
-    color: var(--white);
-}
-
-.origin-image {
-    width: 50%;
-
-    background:
-        linear-gradient(
-            rgba(23, 59, 45, 0.1),
-            rgba(23, 59, 45, 0.1)
-        ),
-        url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1400&q=85")
-        center center / cover no-repeat;
-}
-
-.origin-content {
-    width: 50%;
-
-    padding: 100px 8%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.origin-content .section-label {
-    color: var(--gold-light);
-}
-
-.origin-content h2 {
-    color: var(--white);
-
-    font-size: clamp(65px, 7vw, 100px);
-
-    font-weight: 500;
-
-    line-height: 0.85;
-
-    margin-bottom: 30px;
-}
-
-.origin-content p {
-    max-width: 500px;
-
-    color: rgba(255, 255, 255, 0.72);
-
-    font-size: 15px;
-
-    line-height: 1.9;
-}
-
-.btn-light-vanesia {
-    align-self: flex-start;
-
-    margin-top: 25px;
-
-    padding: 13px 25px;
-
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    border-radius: 2px;
-
-    color: var(--white);
-
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.btn-light-vanesia:hover {
-    background: var(--white);
-
-    color: var(--forest);
-}
-
-
-/* =====================================================
-   QUALITY
-===================================================== */
-
-.quality-section {
-    padding: 130px 0;
-
-    background: var(--cream);
-}
-
-.quality-intro {
-    color: var(--muted);
-
-    font-size: 15px;
-
-    line-height: 1.9;
-
-    padding-top: 20px;
-}
-
-.process-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    margin-top: 60px;
-
-    border-top: 1px solid #cfc5b2;
-    border-bottom: 1px solid #cfc5b2;
-}
-
-.process-item {
-    padding: 40px 25px;
-
-    border-right: 1px solid #cfc5b2;
-}
-
-.process-item:last-child {
-    border-right: none;
-}
-
-.process-item span {
-    color: var(--gold);
-
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.process-item h3 {
-    color: var(--forest);
-
-    font-size: 32px;
-
-    font-weight: 500;
-
-    margin: 20px 0 12px;
-}
-
-.process-item p {
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.cta-section {
-    position: relative;
-
-    min-height: 550px;
-
+.quote-success-message {
     display: flex;
     align-items: center;
+    gap: 12px;
 
-    text-align: center;
+    margin-bottom: 20px;
+    padding: 16px 20px;
 
-    background:
-        linear-gradient(
-            rgba(23, 59, 45, 0.8),
-            rgba(23, 59, 45, 0.8)
-        ),
-        url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2000&q=85")
-        center center / cover no-repeat;
+    background: #edf4eb;
 
-    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+
+    color: #315d38;
 }
 
-.cta-content {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
+.quote-success-message i {
+    font-size: 18px;
 }
 
-.cta-content .section-label {
-    color: var(--gold-light);
-}
 
-.cta-content h2 {
-    max-width: 800px;
+/* ERROR */
 
-    margin: 0 auto 25px;
+.quote-error-message {
+    margin-bottom: 20px;
+    padding: 18px 20px;
 
-    color: var(--white);
+    background: #f8e9e7;
 
-    font-size: clamp(55px, 7vw, 90px);
-
-    font-weight: 500;
-
-    line-height: 0.9;
-}
-
-.cta-content p {
-    color: rgba(255, 255, 255, 0.75);
-
-    font-size: 15px;
-
-    margin-bottom: 30px;
-}
-
-.btn-cta {
-    display: inline-block;
-
-    background: var(--gold);
-
-    color: var(--white);
-
-    padding: 15px 30px;
-
-    border-radius: 2px;
-
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
-    font-weight: 700;
+
+    color: #7a332c;
 }
 
-.btn-cta:hover {
-    background: var(--white);
+.quote-error-message strong {
+    display: block;
+    margin-bottom: 8px;
+}
 
-    color: var(--forest);
+.quote-error-message ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 767px) {
+
+    .vanesia-quote-section {
+        padding: 80px 0;
+    }
+
+    .vanesia-quote-title {
+        font-size: 50px;
+    }
+
+    .vanesia-quote-form {
+        padding: 25px;
+    }
+
+    .vanesia-quote-note {
+        margin-top: 35px;
+    }
+
 }
 
 

@@ -37,134 +37,165 @@
      NAVBAR
 ===================================================== --}}
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top vanesia-navbar">
+<nav class="navbar navbar-expand-lg vanesia-navbar fixed-top">
 
     <div class="container">
 
         {{-- LOGO --}}
-        <a class="navbar-brand vanesia-logo"
-           href="{{ route('home') }}">
-
+        <a class="navbar-brand vanesia-brand" href="{{ route('home') }}#home">
             VANESIA
-
-            <span>
-                {{ __('INDONESIAN VANILLA') }}
-            </span>
-
         </a>
 
 
         {{-- MOBILE BUTTON --}}
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#vanesiaNavbar"
+            aria-controls="vanesiaNavbar"
+            aria-expanded="false"
+            aria-label="{{ __('Toggle navigation') }}"
+        >
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
 
-        {{-- NAVIGATION --}}
-        <div class="collapse navbar-collapse"
-             id="mainNavbar">
+        {{-- MENU --}}
+        <div
+            class="collapse navbar-collapse"
+            id="vanesiaNavbar"
+        >
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
 
 
                 {{-- HOME --}}
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="{{ route('home') }}">
-
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#home"
+                    >
                         {{ __('Home') }}
-
                     </a>
-
-                </li>
-
-
-                {{-- PRODUCTS --}}
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="{{ route('products.index') }}">
-
-                        {{ __('Products') }}
-
-                    </a>
-
                 </li>
 
 
                 {{-- ABOUT --}}
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="{{ route('about') }}">
-
-                        {{ __('About Us') }}
-
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#about"
+                    >
+                        {{ __('About') }}
                     </a>
+                </li>
 
+
+                {{-- PRODUCTS --}}
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#products"
+                    >
+                        {{ __('Our Vanilla') }}
+                    </a>
+                </li>
+
+
+                {{-- ORIGIN --}}
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#origin"
+                    >
+                        {{ __('Origin') }}
+                    </a>
                 </li>
 
 
                 {{-- QUALITY --}}
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="{{ route('quality') }}">
-
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#quality"
+                    >
                         {{ __('Quality') }}
-
                     </a>
-
                 </li>
 
 
-                {{-- REQUEST QUOTE --}}
-                <li class="nav-item ms-lg-3">
-
-                    <a class="btn btn-vanesia"
-                       href="{{ route('contact') }}">
-
-                        {{ __('Request a Quote') }}
-
+                {{-- PROCESS --}}
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#process"
+                    >
+                        {{ __('Process') }}
                     </a>
+                </li>
 
+
+                {{-- EXPORT --}}
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="{{ route('home') }}#export"
+                    >
+                        {{ __('Export') }}
+                    </a>
                 </li>
 
 
                 {{-- LANGUAGE --}}
-                <li class="nav-item ms-lg-3">
+                <li class="nav-item dropdown ms-lg-3">
 
-                    <div class="language-switcher">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        {{ strtoupper(app()->getLocale()) }}
+                    </a>
 
-                        <a href="{{ route('language.switch', 'id') }}"
-                           class="{{ app()->getLocale() == 'id' ? 'active' : '' }}">
+                    <ul class="dropdown-menu dropdown-menu-end">
 
-                            ID
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="{{ route('language.switch', ['locale' => 'en']) }}"
+                            >
+                                English
+                            </a>
+                        </li>
 
-                        </a>
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="{{ route('language.switch', ['locale' => 'id']) }}"
+                            >
+                                Indonesia
+                            </a>
+                        </li>
 
-                        <span>/</span>
-
-                        <a href="{{ route('language.switch', 'en') }}"
-                           class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">
-
-                            EN
-
-                        </a>
-
-                    </div>
+                    </ul>
 
                 </li>
 
+
+                {{-- QUOTE BUTTON --}}
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        href="{{ route('home') }}#contact"
+                        class="vanesia-nav-quote"
+                    >
+                        {{ __('Request a Quote') }}
+                    </a>
+
+                </li>
 
             </ul>
 
@@ -173,7 +204,6 @@
     </div>
 
 </nav>
-
 
 
 {{-- =====================================================
@@ -256,28 +286,6 @@
             </div>
 
 
-
-            {{-- BUSINESS --}}
-            <div class="col-lg-2 col-md-4">
-
-                <h5>
-                    {{ __('Business') }}
-                </h5>
-
-
-                <a href="{{ route('contact') }}">
-                    {{ __('Request a Quote') }}
-                </a>
-
-
-                <a href="{{ route('contact') }}">
-                    {{ __('Contact') }}
-                </a>
-
-            </div>
-
-
-
             {{-- CONTACT --}}
             <div class="col-lg-3 col-md-4">
 
@@ -299,7 +307,7 @@
 
                 <p>
                     {{ __('WhatsApp') }}:
-                    +62 xxx xxxx xxxx
+                    +62 87823829816
                 </p>
 
             </div>

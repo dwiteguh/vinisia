@@ -6,9 +6,13 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\QualityController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\QuoteController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
+
+Route::post('/request-a-quote', [QuoteController::class, 'store'])
+    ->name('quote.store');
 
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products.index');
