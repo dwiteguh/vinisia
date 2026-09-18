@@ -196,7 +196,7 @@
 
                 <div class="vanesia-about-visual">
                     <img
-                        src="{{ asset('images/vanesia.jpg') }}"
+                        src="{{ asset('images/home.jpg') }}"
                         alt="{{ __('VANESIA Indonesian Vanilla') }}"
                     >
                 </div>
@@ -435,7 +435,7 @@
                 <div class="vanesia-origin-image">
 
                     <img
-                        src="{{ asset('images/vanili.jpg') }}"
+                        src="{{ asset('images/image.jpg') }}"
                         alt="{{ __('Indonesian Vanilla') }}"
                     >
 
@@ -872,7 +872,7 @@
                 <div class="vanesia-why-visual">
 
                     <img
-                        src="{{ asset('images/vanili.jpg') }}"
+                        src="{{ asset('images/vanesiapak.jpg') }}"
                         alt="{{ __('Careful Vanilla Selection') }}"
                     >
 
@@ -1201,7 +1201,7 @@
                 <div class="vanesia-packaging-visual">
 
                     <img
-                        src="{{ asset('images/vanesia-packaging.jpg') }}"
+                        src="{{ asset('images/pack.jpg') }}"
                         alt="{{ __('Clear Vacuum-Sealed Packaging') }}"
                     >
 
